@@ -16,10 +16,20 @@ function BinarioADecimal(num) {
 }
 
 function DecimalABinario(num) {
-
+   var binario = "";
+   while (num > 0) {
+      var result = num % 2;
+      num = Math.floor(num / 2);
+      console.log(result);
+      console.log(num);
+      binario = result + binario;
+   }
+   console.log(binario);
+   return binario;
 }
 
-BinarioADecimal("10");
+BinarioADecimal("1100");
+DecimalABinario(8);
 
 module.exports = {
    BinarioADecimal,
